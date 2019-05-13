@@ -5,6 +5,30 @@
       "email": "dev@dev.com",
       "password": "12345678",
       "name": "Admin"
+    },
+    {
+      "email": "test@test.com",
+      "password": "111111",
+      "name": "Support Team",
+      "id": 2
+    },
+    {
+      "email": "lutsenko.maxim@gmail.com",
+      "password": "666666",
+      "name": "нннннн",
+      "id": 3
+    },
+    {
+      "email": "lutsenko.maxim2@gmail.com",
+      "password": "444444",
+      "name": "Support Team",
+      "id": 4
+    },
+    {
+      "email": "lutsenko.ma44325345xim@gmail.com",
+      "password": "111111",
+      "name": "Support Team",
+      "id": 5
     }
   ],
   "bill": {
