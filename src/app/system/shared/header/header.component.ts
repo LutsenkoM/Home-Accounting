@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   user: User;
 
 
-  constructor(private authService) { }
+  constructor() { }
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('user'));
