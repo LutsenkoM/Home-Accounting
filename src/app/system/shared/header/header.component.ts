@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from "../../../shared/models/user.model";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  date: Date = new Date();
+  user: User;
+
+
+  constructor(private authService) { }
 
   ngOnInit() {
+    this.user = JSON.parse(window.localStorage.getItem('user'));
+  }
+
+  onLogout() {
+
   }
 
 }
