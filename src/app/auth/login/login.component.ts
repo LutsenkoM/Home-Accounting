@@ -3,7 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UserService} from '../../shared/services/user.service';
 import {User} from '../../shared/models/user.model';
 import {Message} from '../../shared/models/message.model';
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 @Component({
     selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     message: Message;
 
-    constructor(private usersService: UserService, private route: ActivatedRoute) {
+    constructor(private usersService: UserService, private route: ActivatedRoute, private router: Router) {
     }
 
     ngOnInit() {
@@ -50,7 +50,10 @@ export class LoginComponent implements OnInit {
             .subscribe((user: User) => {
                 if (user) {
                     if (user.password === formData.password) {
-                        // Login logic
+                        this.message.text = '';
+                        window.localStorage.setItem('user', JSON.stringify(user));
+                        // this.authService.login();
+                        this.router.navigate(['/system', 'bill']);
                     } else {
                         this.showMessage({
                             text: 'Wrong password',
