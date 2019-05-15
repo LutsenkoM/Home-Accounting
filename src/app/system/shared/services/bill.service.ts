@@ -19,10 +19,11 @@ export class BillService {
       );
   }
 
-  getCurrency(base: string = 'UAH'): Observable<any> {
-    return this.http.get(`http://api.fixer.io/latest?base=${base}`)
-      .pipe(
-        map((response: any) => response)
-      );;
-  }
+  // getCurrency(base: string = 'RUB'): Observable<any>{
+  //   return this.http.get(`http://api.fixer.io/latest?base=${base}`)
+  //       .pipe(
+  //         map((response: any) => response)
+  //       );
+  // }
+
 }
