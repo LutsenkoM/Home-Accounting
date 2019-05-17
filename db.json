@@ -11,10 +11,16 @@
       "password": "111111",
       "name": "Support Team",
       "id": 2
+    },
+    {
+      "email": "www@www.w",
+      "password": "111111",
+      "name": "111111",
+      "id": 3
     }
   ],
   "bill": {
-    "value": 12456,
+    "value": 10000,
     "currency": "€"
   },
   "categories": [
@@ -32,6 +38,16 @@
       "id": 3,
       "name": "Car",
       "capacity": 7000
+    },
+    {
+      "name": "admin",
+      "capacity": 0,
+      "id": 4
+    },
+    {
+      "name": "max.lutsenko",
+      "capacity": 5498,
+      "id": 5
     }
   ],
   "events": [

@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+import {BaseApi} from "../../../shared/core/base-api";
+import {HttpClient} from "@angular/common/http";
+import {Category} from "../models/category.model";
+import {Observable, Observer} from "rxjs/Rx";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CategoriesService extends BaseApi{
+
+  constructor(public http: HttpClient) {
+    super(http);
+  }
+
+  addCategory(category: Category): Observable <Category> {
+    return this.post('categories', category);
+  }
+
+}
