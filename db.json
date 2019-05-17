@@ -14,8 +14,8 @@
     }
   ],
   "bill": {
-    "value": 100000,
-    "currency": "$"
+    "value": 12456,
+    "currency": "€"
   },
   "categories": [
     {

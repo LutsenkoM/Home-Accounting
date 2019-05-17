@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
                     }
                 } else {
                     this.showMessage({
-                        text: 'User dont defined',
+                        text: 'User don\'t defined',
                         type: 'danger'
                     });
                 }
