@@ -9,19 +9,17 @@ import {Bill} from "../../shared/models/bill.model";
 export class CurrencyCardComponent implements OnInit {
 
   @Input() currency: any;
-  currencyDate: string;
-  courseUsd: number;
-  courseEur: number;
-  courseUah: number;
 
+  rates: object;
+
+  currencies: string[] = ['USD', 'EUR', 'UAH'];
 
   constructor() { }
 
   ngOnInit() {
-    this.currencyDate = this.currency.date;
-    this.courseUsd = this.currency.rates.USD;
-    this.courseEur = this.currency.rates.EUR;
-    this.courseUah = this.currency.rates.UAH;
+
+    this.rates = this.currency.rates;
+
   }
 
 }

@@ -34,6 +34,7 @@ export class BillPageComponent implements OnInit, OnDestroy {
       this.subscriptionCurrency =  this.billService.getCurrency()
         .delay(500)
         .subscribe((currency: any)=>{
+          console.log(currency);
           this.currency = currency;
           this.isLoaded = true;
     });
