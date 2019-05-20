@@ -26,7 +26,7 @@ export class AddCategoryComponent implements OnInit {
     this.categoriesService.addCategory(category)
       .subscribe((category: Category) => {
         form.reset();
-        form.form.patchValue({capacity: 1});
+        form.form.patchValue({capacity: 1}); //set default value
         this.onCategoryAdd.emit(category);
       })
   }
