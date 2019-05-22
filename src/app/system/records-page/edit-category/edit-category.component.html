@@ -8,7 +8,11 @@
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
       <div class="form-group">
         <label class="control-label" for="e-select-category">Choose category</label>
-        <select class="form-control" id="e-select-category">
+        <select class="form-control" id="e-select-category"
+                [(ngModel)]="currentCategoryId"
+                [ngModelOptions]="{standalone: true}"
+                (change)="onCategoryChange()"
+        >
           <option *ngFor="let c of categories" [value]="c.id">
             {{c.name}}
           </option>
@@ -26,7 +30,7 @@
                 required
                 #name="ngModel"
                 name="name"
-                ngModel
+                [ngModel] = "currentCategory.name"
         >
         <span *ngIf="name.invalid && name.touched" class="form-help-text">
           Category name can't be empty
@@ -41,7 +45,7 @@
                 type="number"
                 id="e-category-value"
                 class="form-control"
-                [ngModel]="0"
+                [ngModel]="currentCategory.capacity"
                 name="capacity"
                 #capacity="ngModel"
                 required
@@ -49,7 +53,10 @@
         >
         <span *ngIf="capacity.invalid && capacity.touched" class="form-help-text">Field can't be empty</span>
       </div>
-      <button type="submit" class="btn btn-primary">Add</button>
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Edit</button>
+      <div class="alert alert-{{message.type}}" *ngIf="message.text">
+        {{message.text}}
+      </div>
     </form>
   </div>
 </div>

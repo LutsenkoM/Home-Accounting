@@ -19,7 +19,7 @@
   </div>
   <div class="row">
     <div class="col-md-6">
-      <app-edit-category [categories]="categories"></app-edit-category>
+      <app-edit-category [categories]="categories" (onCategoryEdit)="categoryWasEdited($event)"></app-edit-category>
     </div>
   </div>
 </section>
