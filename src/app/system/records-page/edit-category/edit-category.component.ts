@@ -1,16 +1,19 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter, OnDestroy} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {CategoriesService} from "../../shared/services/categories.service";
 import {Category} from "../../shared/models/category.model";
 import {Message} from "../../../shared/models/message.model";
 import {text} from "@angular/core/src/render3/instructions";
+import {Subscription} from "rxjs/Rx";
 
 @Component({
   selector: 'app-edit-category',
   templateUrl: './edit-category.component.html',
   styleUrls: ['./edit-category.component.scss']
 })
-export class EditCategoryComponent implements OnInit {
+export class EditCategoryComponent implements OnInit, OnDestroy {
+  sub1: Subscription;
+
   @Input() categories: Category[] = [];
   @Output() onCategoryEdit = new EventEmitter();
 
@@ -32,7 +35,7 @@ export class EditCategoryComponent implements OnInit {
 
     const category = new Category(name, capacity, +this.currentCategoryId);
 
-    this.categoriesService.updateCategory(category)
+    this.sub1 =  this.categoriesService.updateCategory(category)
       .subscribe((category: Category) => {
         this.onCategoryEdit.emit(category);
         this.message.text = 'Category has been edited';
@@ -43,6 +46,10 @@ export class EditCategoryComponent implements OnInit {
   onCategoryChange() {
     this.currentCategory = this.categories
       .find(c => c.id === +this.currentCategoryId)
+  }
+
+  ngOnDestroy() {
+    if (this.sub1) this.sub1.unsubscribe();
   }
 
 }
