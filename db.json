@@ -20,7 +20,7 @@
     }
   ],
   "bill": {
-    "value": 10000,
+    "value": 19950,
     "currency": "€"
   },
   "categories": [
@@ -38,6 +38,11 @@
       "id": 3,
       "name": "Car",
       "capacity": 7000
+    },
+    {
+      "name": "Party",
+      "capacity": 5000,
+      "id": 4
     }
   ],
   "events": [
@@ -206,6 +211,38 @@
       "date": "30:05:2019 18:50:07",
       "description": "gfhdgfhgf",
       "id": 60
+    },
+    {
+      "type": "outcome",
+      "amount": 50,
+      "category": 4,
+      "date": "03:06:2019 12:50:02",
+      "description": "kki",
+      "id": 61
+    },
+    {
+      "type": "outcome",
+      "amount": 2000,
+      "category": 4,
+      "date": "03:06:2019 12:50:18",
+      "description": "kki",
+      "id": 62
+    },
+    {
+      "type": "income",
+      "amount": 2000,
+      "category": 4,
+      "date": "03:06:2019 12:50:52",
+      "description": "gfhdgfhgf",
+      "id": 63
+    },
+    {
+      "type": "income",
+      "amount": 10000,
+      "category": 4,
+      "date": "03:06:2019 12:51:20",
+      "description": "5",
+      "id": 64
     }
   ]
 }
