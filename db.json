@@ -20,229 +20,58 @@
     }
   ],
   "bill": {
-    "value": 19950,
+    "value": 18390,
     "currency": "€"
   },
   "categories": [
     {
       "name": "Home",
-      "capacity": 15000,
+      "capacity": 1000,
       "id": 1
     },
     {
       "name": "Food",
-      "capacity": 10000,
+      "capacity": 1000,
       "id": 2
     },
     {
-      "id": 3,
       "name": "Car",
-      "capacity": 7000
-    },
-    {
-      "name": "Party",
-      "capacity": 5000,
-      "id": 4
+      "capacity": 1000,
+      "id": 3
     }
   ],
   "events": [
     {
-      "id": 1,
-      "type": "income",
-      "amount": 1250,
+      "type": "outcome",
+      "amount": 500,
+      "category": 1,
+      "date": "04:06:2019 13:01:44",
+      "description": "test description",
+      "id": 1
+    },
+    {
+      "type": "outcome",
+      "amount": 750,
       "category": 2,
-      "date": "12.06.2017 19:49:02",
-      "description": "Gifted food in guest"
-    },
-    {
-      "id": 2,
-      "type": "outcome",
-      "amount": 1300,
-      "category": 1,
-      "date": "13.06.2017 19:49:02",
-      "description": "Buy washing machine"
-    },
-    {
-      "type": "income",
-      "amount": 1480,
-      "category": 2,
-      "date": "17.06.2017 14:00:48",
-      "id": 3,
-      "description": "Free food for bonuses"
+      "date": "04:06:2019 13:01:51",
+      "description": "test description",
+      "id": 2
     },
     {
       "type": "outcome",
-      "amount": 2470,
-      "category": 2,
-      "date": "17.06.2017 14:00:58",
-      "id": 4,
-      "description": "Buy food for all week"
-    },
-    {
-      "type": "outcome",
-      "amount": 4000,
+      "amount": 400,
       "category": 3,
-      "date": "10.06.2017 14:01:58",
-      "id": 5,
-      "description": "Zapravka + TO"
-    },
-    {
-      "amount": 9,
-      "category": 1,
-      "date": "24:05:2019 17:45:18",
-      "description": "test",
-      "id": 6
-    },
-    {
-      "amount": 9,
-      "category": 1,
-      "date": "24:05:2019 17:45:26",
-      "description": "test",
-      "id": 7
-    },
-    {
-      "type": "outcome",
-      "amount": 1,
-      "category": 1,
-      "date": "24:05:2019 18:08:01",
-      "description": "re",
-      "id": 47
+      "date": "04:06:2019 13:01:58",
+      "description": "test description",
+      "id": 3
     },
     {
       "type": "income",
-      "amount": 0,
+      "amount": 100,
       "category": 1,
-      "date": "24:05:2019 18:08:07",
-      "description": "425",
-      "id": 48
-    },
-    {
-      "type": "outcome",
-      "amount": 1000,
-      "category": 1,
-      "date": "24:05:2019 18:08:30",
-      "description": "gfhdgfhgf",
-      "id": 49
-    },
-    {
-      "type": "income",
-      "amount": 1,
-      "category": 1,
-      "date": "24:05:2019 18:09:48",
-      "description": "9676",
-      "id": 50
-    },
-    {
-      "type": "income",
-      "amount": 3,
-      "category": 1,
-      "date": "24:05:2019 18:10:02",
-      "description": "rtyrty",
-      "id": 51
-    },
-    {
-      "type": "outcome",
-      "amount": 1000,
-      "category": 5,
-      "date": "24:05:2019 18:11:16",
-      "description": "gfhdgfhgf",
-      "id": 52
-    },
-    {
-      "type": "outcome",
-      "amount": 3000,
-      "category": 3,
-      "date": "30:05:2019 18:47:29",
-      "description": "gfhdgfhgf",
-      "id": 53
-    },
-    {
-      "type": "income",
-      "amount": 1000,
-      "category": 1,
-      "date": "30:05:2019 18:47:52",
-      "description": "kki",
-      "id": 54
-    },
-    {
-      "type": "income",
-      "amount": 1000,
-      "category": 3,
-      "date": "30:05:2019 18:48:05",
-      "description": "kki",
-      "id": 55
-    },
-    {
-      "type": "outcome",
-      "amount": 5000,
-      "category": 1,
-      "date": "30:05:2019 18:48:41",
-      "description": "gfhdgfhgf",
-      "id": 56
-    },
-    {
-      "type": "outcome",
-      "amount": 4000,
-      "category": 1,
-      "date": "30:05:2019 18:48:58",
-      "description": "gfhdgfhgf",
-      "id": 57
-    },
-    {
-      "type": "income",
-      "amount": 7000,
-      "category": 1,
-      "date": "30:05:2019 18:49:25",
-      "description": "gfhdgfhgf",
-      "id": 58
-    },
-    {
-      "type": "income",
-      "amount": 8000,
-      "category": 1,
-      "date": "30:05:2019 18:49:36",
-      "description": "gfhdgfhgf",
-      "id": 59
-    },
-    {
-      "type": "outcome",
-      "amount": 5000,
-      "category": 3,
-      "date": "30:05:2019 18:50:07",
-      "description": "gfhdgfhgf",
-      "id": 60
-    },
-    {
-      "type": "outcome",
-      "amount": 50,
-      "category": 4,
-      "date": "03:06:2019 12:50:02",
-      "description": "kki",
-      "id": 61
-    },
-    {
-      "type": "outcome",
-      "amount": 2000,
-      "category": 4,
-      "date": "03:06:2019 12:50:18",
-      "description": "kki",
-      "id": 62
-    },
-    {
-      "type": "income",
-      "amount": 2000,
-      "category": 4,
-      "date": "03:06:2019 12:50:52",
-      "description": "gfhdgfhgf",
-      "id": 63
-    },
-    {
-      "type": "income",
-      "amount": 10000,
-      "category": 4,
-      "date": "03:06:2019 12:51:20",
-      "description": "5",
-      "id": 64
+      "date": "04:06:2019 13:03:17",
+      "description": "test description",
+      "id": 4
     }
   ]
 }
