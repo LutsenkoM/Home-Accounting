@@ -53,7 +53,7 @@
       "type": "outcome",
       "amount": 750,
       "category": 2,
-      "date": "04:06:2019 13:01:51",
+      "date": "03:06:2019 13:01:51",
       "description": "test description",
       "id": 2
     },
@@ -61,7 +61,7 @@
       "type": "outcome",
       "amount": 400,
       "category": 3,
-      "date": "04:06:2019 13:01:58",
+      "date": "02:06:2019 13:01:58",
       "description": "test description",
       "id": 3
     },
@@ -69,7 +69,7 @@
       "type": "income",
       "amount": 100,
       "category": 1,
-      "date": "04:06:2019 13:03:17",
+      "date": "01:06:2019 13:03:17",
       "description": "test description",
       "id": 4
     }
