@@ -28,6 +28,11 @@ export class LoginComponent implements OnInit {
                         text: 'Now you can login!',
                         type: 'success'
                     });
+                } else if (params['accessDenied']) {
+                    this.showMessage({
+                        text: 'You should be logined',
+                        type: 'warning'
+                    });
                 }
             });
 
