@@ -16,7 +16,7 @@ export class HistoryDetailComponent implements OnInit, OnDestroy {
   event: APPEvent;
   category: Category;
 
-  isLoaded: false;
+  isLoaded = false;
   s1: Subscription;
 
   constructor(private route: ActivatedRoute,
@@ -25,16 +25,14 @@ export class HistoryDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.s1 = this.route.params
-        .mergeMap((params: Params) =>
-          this.eventService.getEventBtId(params['id'])
-        )
-        .mergeMap((event: APPEvent) => {
+        .mergeMap((params: Params) => this.eventService.getEventBtId(params['id']))
+        .mergeMap((event: any) => {
           this.event = event;
           return this.categoriesService.getCategoryById(event.category);
         })
         .subscribe((category: Category) => {
           this.category = category;
-          this.isLoaded = false;
+          this.isLoaded = true;
         })
   }
 

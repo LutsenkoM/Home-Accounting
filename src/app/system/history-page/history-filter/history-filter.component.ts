@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-history-filter',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryFilterComponent implements OnInit {
 
+  @Output() onFilterCancel = new EventEmitter<any>();
+  @Output() onFilterApply = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closeFilter() {
+    this.onFilterCancel.emit();
   }
 
 }
