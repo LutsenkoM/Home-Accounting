@@ -72,6 +72,22 @@
       "date": "01:06:2019 13:03:17",
       "description": "test description",
       "id": 4
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 1,
+      "date": "19:06:2019 16:26:10",
+      "description": "kki",
+      "id": 5
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 2,
+      "date": "19:06:2019 16:32:28",
+      "description": "gfhdgfhgf",
+      "id": 6
     }
   ]
 }
