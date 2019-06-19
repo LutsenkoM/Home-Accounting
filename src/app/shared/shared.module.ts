@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   exports: [
     FormsModule,
     ReactiveFormsModule
-  ],
-  declarations: []
+  ]
 })
 export class SharedModule { }
