@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import {LoaderComponent} from "./components/loader/loader.component";
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   imports: [
@@ -11,7 +13,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   exports: [
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    LoadingComponent
+  ],
+  declarations: [LoadingComponent]
 })
 export class SharedModule { }
