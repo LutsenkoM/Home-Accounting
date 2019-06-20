@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 
 import {UserService} from "../../shared/services/user.service";
 import {User} from "../../shared/models/user.model";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-registration',
@@ -14,7 +15,18 @@ export class RegistrationComponent implements OnInit {
 
   regForm: FormGroup;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(
+      private userService: UserService,
+      private router: Router,
+      private title: Title,
+      private meta: Meta
+  ) {
+      title.setTitle('Registration');
+      meta.addTags([
+          {name: 'keywords', content: 'registration, sign up'},
+          {name: 'description', content: 'Page for registration'}
+      ]);
+  }
 
   ngOnInit() {
       this.regForm = new FormGroup({
